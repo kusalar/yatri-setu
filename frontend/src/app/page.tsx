@@ -92,6 +92,15 @@ export default function HomePage() {
     altUrl: '/destinations/darjeeling/alternatives'
   });
 
+  const scrollToHiddenIndia = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const el = document.getElementById('hidden-india');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.dispatchEvent(new CustomEvent('activate-hidden-india'));
+    }
+  };
+
   // Handle keyboard escape and body scroll locking for the modal
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -263,8 +272,19 @@ export default function HomePage() {
                 </Button>
               </MagneticButton>
               <MagneticButton>
-                <Button variant="outline" asChild className="rounded-xl border-white/30 bg-stone-900/60 hover:bg-stone-900/90 text-white hover:text-amber-300 hover:border-amber-400/50 font-bold px-7 h-12 text-base sm:text-lg shadow-md backdrop-blur-md transition-all">
-                  <Link href="#hidden-india" className="text-white hover:text-amber-300">Hidden India</Link>
+                <Button
+                  variant="outline"
+                  asChild
+                  className="rounded-xl border-amber-400/50 bg-stone-900/70 hover:bg-stone-900/95 text-white hover:text-amber-300 hover:border-amber-400 font-bold px-7 h-12 text-base sm:text-lg shadow-lg shadow-amber-500/10 backdrop-blur-md transition-all group"
+                >
+                  <a
+                    href="#hidden-india"
+                    onClick={scrollToHiddenIndia}
+                    className="text-white hover:text-amber-300 inline-flex items-center gap-2"
+                  >
+                    <span className="text-amber-400 group-hover:rotate-12 transition-transform">✦</span>
+                    <span>Hidden India</span>
+                  </a>
                 </Button>
               </MagneticButton>
             </div>
@@ -513,8 +533,8 @@ export default function HomePage() {
         <SignatureFlowStory />
       </ErrorBoundary>
 
-      {/* 6. IMMERSIVE HIMALAYAN THEMES */}
-      <ErrorBoundary fallbackTitle="Himalayan Rhythm Gallery Temporarily Unavailable">
+      {/* 6. HIDDEN INDIA: UNCHARTED SANCTUARIES */}
+      <ErrorBoundary fallbackTitle="Hidden India Sanctuary Gallery Temporarily Unavailable">
         <HimalayanThemesGallery />
       </ErrorBoundary>
 
