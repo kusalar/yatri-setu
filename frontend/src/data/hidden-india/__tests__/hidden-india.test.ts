@@ -79,10 +79,11 @@ describe('Hidden India Architecture & Data Integrity', () => {
     assert.ok(dholavira, 'Dholavira place detail must resolve');
     assert.strictEqual(dholavira.name, 'Dholavira');
     assert.strictEqual(dholavira.category, 'Heritage');
-    assert.ok(dholavira.localStory.paragraphs.length >= 2, 'Must have detailed local story');
-    assert.ok(dholavira.whyVisit.length >= 3, 'Must have at least 3 reasons to visit');
-    assert.ok(dholavira.experiences.length >= 2, 'Must have experience cards');
-    assert.ok(dholavira.responsibleTravel.length >= 2, 'Must have responsible travel guidelines');
+    assert.ok(dholavira.imageAlt, 'Dholavira must have imageAlt');
+    assert.ok(dholavira.localStory && dholavira.localStory.paragraphs.length >= 2, 'Must have detailed local story');
+    assert.ok(dholavira.whyVisit && dholavira.whyVisit.length >= 3, 'Must have at least 3 reasons to visit');
+    assert.ok(dholavira.experiences && dholavira.experiences.length >= 2, 'Must have experience cards');
+    assert.ok(dholavira.responsibleTravel && dholavira.responsibleTravel.length >= 2, 'Must have responsible travel guidelines');
     assert.ok(Array.isArray(dholavira.coordinates), 'Coordinates must be valid array');
   });
 
@@ -91,8 +92,44 @@ describe('Hidden India Architecture & Data Integrity', () => {
     assert.ok(chatakpur, 'Chatakpur must exist in Darjeeling');
     assert.strictEqual(chatakpur.name, 'Chatakpur');
     assert.strictEqual(chatakpur.category, 'Village');
+    assert.ok(chatakpur.imageAlt, 'Chatakpur must have imageAlt');
     assert.ok(chatakpur.elevation, 'Chatakpur must specify elevation');
     assert.ok(chatakpur.bestTime, 'Chatakpur must specify best season');
+  });
+
+  it('ensures every hidden place has an image and meaningful imageAlt', () => {
+    for (const place of HIDDEN_PLACES_DATA) {
+      assert.ok(place.image && place.image.trim().length > 0, `Place ${place.id} must have an image`);
+      assert.ok(place.imageAlt && place.imageAlt.trim().length > 0, `Place ${place.id} must have imageAlt`);
+      assert.ok(!place.imageAlt.toLowerCase().includes('image1'), `Place ${place.id} has invalid generic alt`);
+      assert.ok(!place.imageAlt.toLowerCase().includes('travel image'), `Place ${place.id} has invalid generic alt`);
+    }
+  });
+
+  it('supports Kendrapara in Odisha with unmapped status and zero fabricated claims', () => {
+    const odisha = getStateBySlug('odisha');
+    assert.ok(odisha, 'Odisha state must exist');
+
+    const kendrapara = getDistrictBySlug('odisha', 'kendrapara');
+    assert.ok(kendrapara, 'Kendrapara district must exist in Odisha');
+
+    const kendraparaPlaces = getPlacesForDistrict('odisha', 'kendrapara');
+    assert.ok(kendraparaPlaces.length >= 3, 'Kendrapara must have 3 unmapped places');
+
+    const slugs = kendraparaPlaces.map((p) => p.slug);
+    assert.ok(slugs.includes('bhitarkanika'), 'Must include Bhitarkanika');
+    assert.ok(slugs.includes('gahirmatha'), 'Must include Gahirmatha');
+    assert.ok(slugs.includes('hukitola'), 'Must include Hukitola');
+
+    for (const place of kendraparaPlaces) {
+      assert.strictEqual(place.isUnmapped, true, `${place.name} must be marked isUnmapped: true`);
+      assert.strictEqual(place.localStory, undefined, `${place.name} must NOT contain fabricated localStory`);
+      assert.strictEqual(place.whyVisit, undefined, `${place.name} must NOT contain fabricated whyVisit`);
+      assert.strictEqual(place.experiences, undefined, `${place.name} must NOT contain fabricated experiences`);
+      assert.strictEqual(place.coordinates, undefined, `${place.name} must NOT contain fabricated coordinates`);
+      assert.ok(place.image, `${place.name} must have a destination image`);
+      assert.ok(place.imageAlt, `${place.name} must have meaningful imageAlt`);
+    }
   });
 
   it('gracefully handles invalid state, district and place queries', () => {
@@ -103,8 +140,8 @@ describe('Hidden India Architecture & Data Integrity', () => {
   });
 
   it('handles districts with no mapped places as empty arrays', () => {
-    // Bhavnagar is in Gujarat but currently awaiting place curation
-    const places = getPlacesForDistrict('gujarat', 'bhavnagar');
+    // Koraput is in Odisha but currently awaiting place curation
+    const places = getPlacesForDistrict('odisha', 'koraput');
     assert.ok(Array.isArray(places), 'Must return an array');
     assert.strictEqual(places.length, 0, 'Unmapped district should return 0 places gracefully');
   });
@@ -123,5 +160,8 @@ describe('Hidden India Architecture & Data Integrity', () => {
 
     const craftRes = searchHiddenEntities('', 'Craft');
     assert.ok(craftRes.places.every((p) => p.category === 'Craft'), 'All results must match category Craft');
+
+    const kendraparaSearch = searchHiddenEntities('kendrapara');
+    assert.ok(kendraparaSearch.places.length >= 3, 'Should find Kendrapara places in search');
   });
 });

@@ -14,6 +14,7 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     districtName: 'Kachchh',
     shortDescription: 'Ancient Harappan metropolis situated on Khadir Bet island, surrounded by the stark white expanse of the Great Rann.',
     image: 'https://images.unsplash.com/photo-1599827552599-ea9a039d93ee?auto=format&fit=crop&w=1600&q=80',
+    imageAlt: 'Excavated stone reservoirs and ancient Harappan ruins at Dholavira, Khadir Bet, Kachchh, Gujarat',
     category: 'Heritage',
     tags: ['UNESCO WORLD HERITAGE', 'HARAPPAN CIVILIZATION', 'KHADIR BET', 'ANCIENT WATER SYSTEM'],
     bestTime: 'October to March',
@@ -95,6 +96,7 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     districtName: 'Kachchh',
     shortDescription: 'A living artisan settlement preserving the rare centuries-old Rogan castor-oil art, copper bells, and lacquer woodwork.',
     image: 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1600&q=80',
+    imageAlt: 'Traditional master artisan Rogan painting and copper bell crafting at Nirona village, Kachchh, Gujarat',
     category: 'Craft',
     tags: ['ROGAN ART', 'COPPER BELLS', 'LACQUER CRAFT', 'ARTISAN GUILDS'],
     bestTime: 'October to March',
@@ -165,6 +167,7 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     districtName: 'Kachchh',
     shortDescription: 'A silent fortified outpost at the northwest tip of India where massive stone ramparts overlook the dry estuary of the Indus.',
     image: 'https://images.unsplash.com/photo-1599827552599-ea9a039d93ee?auto=format&fit=crop&w=1600&q=80',
+    imageAlt: 'Historic stone fort bastions and tidal estuary flats at Lakhpat, Kachchh, Gujarat',
     category: 'Heritage',
     tags: ['GHOST TOWN', 'INDUS ESTUARY', 'GURU NANAK GURDWARA', 'STONE BASTIONS'],
     bestTime: 'November to February',
@@ -239,6 +242,7 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     districtName: 'Darjeeling',
     shortDescription: 'A serene Himalayan eco-village at 7,887 ft within Senchal Wildlife Sanctuary, offering panoramic Kanchenjunga sunrises.',
     image: '/hidden-india/chatakpur.jpg',
+    imageAlt: 'Chatakpur mountain eco-village overlooking Kanchenjunga ridge in Senchal Wildlife Sanctuary, Darjeeling, West Bengal',
     category: 'Village',
     tags: ['7,887 FT', 'KANCHENJUNGA VIEWS', 'ECO-VILLAGE', 'HOMESTAYS'],
     bestTime: 'October to May',
@@ -315,6 +319,7 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     districtName: 'Darjeeling',
     shortDescription: 'A silent pine-forest hamlet at 6,959 ft, known for dense oak canopies, bird calls, and panoramic Kanchenjunga tranquility.',
     image: '/hidden-india/lepchajagat.jpg',
+    imageAlt: 'Coniferous pine forest trails and misty mountain sanctuary at Lepchajagat, Darjeeling, West Bengal',
     category: 'Nature',
     tags: ['6,959 FT', 'PINE FORESTS', 'LEPCHA HERITAGE', 'BIRD SANCTUARY'],
     bestTime: 'October to April',
@@ -326,11 +331,11 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     localStory: {
       headline: 'The ancestral domain of the Lepchas enveloped in silent fir and mist.',
       paragraphs: [
-        'Lepchajagat literally translates to "Realm of the Lepchas," the indigenous indigenous inhabitants of the Sikkim and Darjeeling hills whose deep spiritual animism reveres nature as the living body of God.',
+        'Lepchajagat literally translates to "Realm of the Lepchas," the indigenous inhabitants of the Sikkim and Darjeeling hills whose deep spiritual animism reveres nature as the living body of God.',
         'Tucked just behind the busy tourist highway between Ghoom and Mirik, Lepchajagat is shrouded in thick, moss-draped forests of rhododendron, pine, and Himalayan cypress. Even in peak tourist season, its lanes maintain a monastic serenity.',
         'From high forest clearings, travelers can sit on pine needles and watch the snowline of Mt. Kanchenjunga catch the first and last golden rays of the sub-Himalayan sun.'
       ],
-      culturalSignificance: 'A sacred cultural homeland of the Lepcha tribe celebrating ancient symbiotic relationships between forest and human dwellling.',
+      culturalSignificance: 'A sacred cultural homeland of the Lepcha tribe celebrating ancient symbiotic relationships between forest and human dwelling.',
       communityConnection: 'Community-run cottages run by local hill families offer quiet hospitality and guided forest walks.'
     },
     whyVisit: [
@@ -382,6 +387,7 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     districtName: 'Jalpaiguri',
     shortDescription: 'Expansive Teesta river wetlands hosting winter migratory birds, scenic country boat rides, and Baikunthapur forest views.',
     image: '/hidden-india/gajoldoba.jpg',
+    imageAlt: 'Teesta barrage wetlands and winter migratory waterfowl sanctuary at Gajoldoba, Jalpaiguri, West Bengal',
     category: 'Nature',
     tags: ['TEESTA RESERVOIR', 'MIGRATORY BIRDS', 'DOOARS FORESTS', 'WETLAND ESCAPE'],
     bestTime: 'November to March',
@@ -394,7 +400,7 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
       headline: 'A critical winter haven for migratory waterfowl along the Teesta floodway.',
       paragraphs: [
         'Formed around the Teesta Barrage in the Dooars plains of North Bengal, Gajoldoba is an ecological crossroads where the icy waters flowing from Sikkim spread out across expansive braided wetlands.',
-        'Every winter between November and March, thousands of migratory birds travel thousands of miles along the Central Asian Flyway—including bar-headed geese, ferruginous pochars, northern pintails, and ruddy shelducks—to feed and rest in these nutrient-rich backwaters.',
+        'Every winter between November and March, thousands of migratory birds travel thousands of miles along the Central Asian Flyway—including bar-headed geese, ferruginous pochards, northern pintails, and ruddy shelducks—to feed and rest in these nutrient-rich backwaters.',
         'Instead of motorized powerboats that terrify the wildlife, local river fishermen guide quiet wooden country boats using long bamboo poles, gliding silently through misty reeds as snow-capped peaks glint faintly in the northern backdrop.'
       ],
       culturalSignificance: 'A shining example of rural fishermen transitioning to certified eco-guides, protecting the wetlands they once over-harvested.',
@@ -449,6 +455,7 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     districtName: 'Alipurduar',
     shortDescription: 'Historic hill fortress tucked inside Buxa Tiger Reserve, surrounded by dense sub-Himalayan rainforests and Bhutan border trails.',
     image: '/hidden-india/buxa-fort.jpg',
+    imageAlt: 'Historic stone fortress ruins and Dooars hill trails in Buxa Tiger Reserve, Alipurduar, West Bengal',
     category: 'Heritage',
     tags: ['BUXA TIGER RESERVE', 'COLONIAL FORTRESS', 'HIKING TRAILS', 'DOOARS RAINFOREST'],
     bestTime: 'October to April',
@@ -516,6 +523,7 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     districtName: 'Purba Bardhaman',
     shortDescription: 'A serene rural Bengal heritage hamlet featuring 350-year-old terracotta temples, an ancestral Baithak-khana mansion, and lotus ponds.',
     image: '/hidden-india/amadpur.jpg',
+    imageAlt: 'Ancient terracotta temples and restored Baithak-khana mansion at Amadpur village, Purba Bardhaman, West Bengal',
     category: 'Heritage',
     tags: ['TERRACOTTA TEMPLES', 'HERITAGE MANSION', 'RURAL BENGAL', 'LOTUS DIGHI'],
     bestTime: 'July to March',
@@ -587,6 +595,7 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     districtName: 'Pali',
     shortDescription: 'Dramatic billion-year-old granite hills where wild leopards, Rabari pastoralists, and seasonal migratory birds coexist harmoniously.',
     image: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
+    imageAlt: 'Granite boulder hills and Rabari pastoral landscape at Jawai Bandh, Pali, Rajasthan',
     category: 'Wildlife',
     tags: ['LEOPARD CONSERVATION', 'RABARI COMMUNITY', 'GRANITE ROCK', 'ECO-TOURISM'],
     bestTime: 'October to April',
@@ -657,6 +666,7 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     districtName: 'Kinnaur',
     shortDescription: 'Traditional apple-blossom village perched at 9,711 ft overlooking the sacred 20,000-ft Kinnaur Kailash massif.',
     image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1600&q=80',
+    imageAlt: 'Kath-Kuni wooden village and apple orchards facing Kinnaur Kailash massif at Kalpa, Kinnaur, Himachal Pradesh',
     category: 'Village',
     tags: ['9,711 FT', 'KINNAUR KAILASH', 'KATH-KUNI ARCHITECTURE', 'APPLE ORCHARDS'],
     bestTime: 'April to October',
@@ -728,6 +738,7 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     districtName: 'East Khasi Hills',
     shortDescription: 'Lesser-known Khasi plateau famous for prehistoric marine fossil beds, natural freshwater canyon pools, and sacred forests.',
     image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80',
+    imageAlt: 'Prehistoric marine fossil plateau and natural freshwater canyon pools at Mawlyngbna, East Khasi Hills, Meghalaya',
     category: 'Nature',
     tags: ['PREHISTORIC FOSSILS', 'SACRED GROVES', 'CANYON POOLS', 'COMMUNITY ECO-TOURISM'],
     bestTime: 'October to April',
@@ -783,5 +794,56 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
       }
     ],
     nearbyPlaceSlugs: ['chatakpur', 'kalpa']
+  },
+
+  // ==========================================
+  // ODISHA - KENDRAPARA (UNMAPPED STATE)
+  // Intentionally unmapped: No fabricated detailed
+  // stories, seasons, coordinates or local claims.
+  // ==========================================
+  {
+    id: 'bhitarkanika',
+    name: 'Bhitarkanika Mangrove Sanctuary',
+    slug: 'bhitarkanika',
+    stateSlug: 'odisha',
+    stateName: 'Odisha',
+    districtSlug: 'kendrapara',
+    districtName: 'Kendrapara',
+    shortDescription: 'Tidal mangrove wetland ecosystem and estuarine river delta spanning the Brahmani and Baitarani river network.',
+    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80',
+    imageAlt: 'Estuarine mangrove waterways and tidal delta vegetation at Bhitarkanika, Kendrapara, Odisha',
+    category: 'Wildlife',
+    tags: ['MANGROVE WETLAND', 'ESTUARINE ECOSYSTEM', 'SALT-WATER CROCODILE HABITAT'],
+    isUnmapped: true
+  },
+  {
+    id: 'gahirmatha',
+    name: 'Gahirmatha Marine Sanctuary',
+    slug: 'gahirmatha',
+    stateSlug: 'odisha',
+    stateName: 'Odisha',
+    districtSlug: 'kendrapara',
+    districtName: 'Kendrapara',
+    shortDescription: 'Extensive coastal marine sanctuary and secluded estuarine beach bordering the Bay of Bengal.',
+    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80',
+    imageAlt: 'Secluded coastal shoreline and marine waters of Gahirmatha, Kendrapara, Odisha',
+    category: 'Nature',
+    tags: ['OLIVE RIDLEY ROOKERY', 'COASTAL ESTUARY', 'BAY OF BENGAL'],
+    isUnmapped: true
+  },
+  {
+    id: 'hukitola',
+    name: 'Hukitola Island',
+    slug: 'hukitola',
+    stateSlug: 'odisha',
+    stateName: 'Odisha',
+    districtSlug: 'kendrapara',
+    districtName: 'Kendrapara',
+    shortDescription: 'Historic 19th-century maritime stone station constructed on a barrier island off the Mahanadi and Kendrapara delta.',
+    image: 'https://images.unsplash.com/photo-1599827552599-ea9a039d93ee?auto=format&fit=crop&w=1600&q=80',
+    imageAlt: 'Historic 19th-century maritime stone building at Hukitola Island, Kendrapara, Odisha',
+    category: 'Heritage',
+    tags: ['HISTORIC MARITIME STATION', 'ESTUARY ISLAND', 'BRITISH COLONIAL ARCHIVE'],
+    isUnmapped: true
   }
 ];

@@ -59,11 +59,13 @@ export interface HiddenPlace {
   districtName: string;
   shortDescription: string;
   image: string;
+  imageAlt?: string;
   category: HiddenPlaceCategory;
   tags: string[];
-  localStory: LocalStory;
-  whyVisit: string[];
-  experiences: ExperienceItem[];
+  isUnmapped?: boolean;
+  localStory?: LocalStory;
+  whyVisit?: string[];
+  experiences?: ExperienceItem[];
   bestTime?: string;
   duration?: string;
   accessibility?: string;
@@ -71,7 +73,7 @@ export interface HiddenPlace {
   coordinates?: [number, number]; // [lng, lat]
   elevation?: string;
   moreAbout?: MoreAboutPlace;
-  responsibleTravel: ResponsibleTravelGuideline[];
+  responsibleTravel?: ResponsibleTravelGuideline[];
   nearbyPlaceSlugs?: string[];
 }
 

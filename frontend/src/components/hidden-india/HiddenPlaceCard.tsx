@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { HiddenPlace } from '@/data/hidden-india/types';
 import { ImageWithSkeleton } from '@/components/ImageWithSkeleton';
-import { ArrowRight, Clock, Calendar, MapPin, Feather, Sparkles } from 'lucide-react';
+import { ArrowRight, Clock, Calendar, MapPin, Feather, Sparkles, Compass } from 'lucide-react';
 import { motion } from 'motion/react';
 
 interface HiddenPlaceCardProps {
@@ -13,6 +13,10 @@ interface HiddenPlaceCardProps {
 }
 
 export function HiddenPlaceCard({ place, index = 0 }: HiddenPlaceCardProps) {
+  const imageAltText =
+    place.imageAlt ||
+    `${place.name}, ${place.districtName}, ${place.stateName} landscape`;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 18 }}
@@ -25,7 +29,7 @@ export function HiddenPlaceCard({ place, index = 0 }: HiddenPlaceCardProps) {
       <div className="relative h-60 sm:h-64 w-full overflow-hidden">
         <ImageWithSkeleton
           src={place.image}
-          alt={`Landscape of ${place.name}, ${place.districtName}`}
+          alt={imageAltText}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-transparent" />
@@ -37,10 +41,17 @@ export function HiddenPlaceCard({ place, index = 0 }: HiddenPlaceCardProps) {
             <span>{place.category}</span>
           </span>
 
-          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/20 backdrop-blur-md border border-emerald-500/30 text-[10px] font-mono font-bold text-emerald-300">
-            <Sparkles className="w-2.5 h-2.5" />
-            <span>Curated Sanctuary</span>
-          </span>
+          {place.isUnmapped ? (
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-500/20 backdrop-blur-md border border-amber-400/30 text-[10px] font-mono font-bold text-amber-300">
+              <Compass className="w-2.5 h-2.5" />
+              <span>Curation Pending</span>
+            </span>
+          ) : (
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/20 backdrop-blur-md border border-emerald-500/30 text-[10px] font-mono font-bold text-emerald-300">
+              <Sparkles className="w-2.5 h-2.5" />
+              <span>Curated Sanctuary</span>
+            </span>
+          )}
         </div>
 
         {/* District & State banner */}
@@ -62,12 +73,17 @@ export function HiddenPlaceCard({ place, index = 0 }: HiddenPlaceCardProps) {
 
           {/* Quick Verified Travel Tags */}
           <div className="flex flex-wrap items-center gap-2 pt-1">
-            {place.bestTime && (
+            {place.bestTime ? (
               <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-stone-800/80 border border-white/10 text-[11px] font-mono text-stone-300">
                 <Calendar className="w-3 h-3 text-amber-400" />
                 <span>{place.bestTime}</span>
               </span>
-            )}
+            ) : place.isUnmapped ? (
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-lg bg-stone-800/60 border border-white/5 text-[10px] font-mono text-stone-400">
+                <span>Seasonal guide pending field verification</span>
+              </span>
+            ) : null}
+
             {place.duration && (
               <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-stone-800/80 border border-white/10 text-[11px] font-mono text-stone-300">
                 <Clock className="w-3 h-3 text-amber-400" />
@@ -79,7 +95,7 @@ export function HiddenPlaceCard({ place, index = 0 }: HiddenPlaceCardProps) {
 
         {/* Footer Action */}
         <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-          <div className="flex flex-wrap gap-1.5 max-w-[65%]">
+          <div className="flex flex-wrap gap-1.5 max-w-[60%]">
             {place.tags.slice(0, 2).map((tag) => (
               <span
                 key={tag}
@@ -93,9 +109,13 @@ export function HiddenPlaceCard({ place, index = 0 }: HiddenPlaceCardProps) {
           <Link
             href={`/hidden-india/${place.stateSlug}/${place.districtSlug}/${place.slug}`}
             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-stone-950 font-bold text-xs tracking-wider uppercase transition-all shadow-md group-hover:shadow-amber-500/20 active:scale-95"
-            aria-label={`Read story and explore ${place.name}`}
+            aria-label={
+              place.isUnmapped
+                ? `Explore overview of ${place.name}`
+                : `Read story and explore ${place.name}`
+            }
           >
-            <span>Read Story</span>
+            <span>{place.isUnmapped ? 'Explore Overview' : 'Read Story'}</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
           </Link>
         </div>

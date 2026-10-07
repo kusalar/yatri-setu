@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { HiddenPlaceCard } from '@/components/hidden-india/HiddenPlaceCard';
+import { UnmappedDestinationNotice } from '@/components/hidden-india/UnmappedDestinationNotice';
 import {
   getStateBySlug,
   getDistrictBySlug,
@@ -13,7 +14,6 @@ import {
 } from '@/data/hidden-india';
 import { ImageWithSkeleton } from '@/components/ImageWithSkeleton';
 import { ArrowLeft, Compass, Sparkles, MapPin, Layers } from 'lucide-react';
-import { motion } from 'motion/react';
 
 export default function DistrictDetailPage() {
   const params = useParams();
@@ -34,6 +34,11 @@ export default function DistrictDetailPage() {
   const siblingDistricts = useMemo(
     () => (state ? getDistrictsForState(state.slug).filter((d) => d.slug !== district?.slug) : []),
     [state, district]
+  );
+
+  const hasUnmappedPlaces = useMemo(
+    () => places.some((p) => p.isUnmapped),
+    [places]
   );
 
   // Error state for invalid state or district
@@ -94,7 +99,11 @@ export default function DistrictDetailPage() {
 
                 <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-500/20 backdrop-blur-md border border-amber-400/40 text-[10px] font-mono font-bold text-amber-300">
                   <Sparkles className="w-2.5 h-2.5" />
-                  <span>{places.length} Mapped {places.length === 1 ? 'Sanctuary' : 'Sanctuaries'}</span>
+                  <span>
+                    {places.length > 0
+                      ? `${places.length} Mapped ${places.length === 1 ? 'Sanctuary' : 'Sanctuaries'}`
+                      : 'Field Curation In Progress'}
+                  </span>
                 </span>
               </div>
 
@@ -131,22 +140,11 @@ export default function DistrictDetailPage() {
           </div>
 
           {places.length === 0 ? (
-            /* Elegant Empty State for districts being mapped */
-            <div className="text-center py-16 px-6 bg-stone-900/50 backdrop-blur-xl rounded-3xl border border-white/10 shadow-xl max-w-xl mx-auto my-8 space-y-4">
-              <div className="w-16 h-16 rounded-3xl bg-amber-500/10 text-amber-400 border border-amber-500/20 flex items-center justify-center mx-auto shadow-inner">
-                <Compass className="w-8 h-8 animate-pulse" />
-              </div>
+            /* Elegant Empty State for districts with no individual places yet */
+            <div className="py-8 max-w-2xl mx-auto space-y-6">
+              <UnmappedDestinationNotice districtName={district.name} />
 
-              <h3 className="font-extrabold text-lg text-white tracking-tight">
-                This part of Hidden India is still being mapped
-              </h3>
-
-              <p className="text-xs sm:text-sm text-stone-300 leading-relaxed max-w-md mx-auto">
-                Our community researchers and local panchayats are actively curating authentic, responsible
-                stories and verified seasonal guidelines for <span className="text-amber-300 font-semibold">{district.name}</span>.
-              </p>
-
-              <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
+              <div className="flex flex-wrap items-center justify-center gap-3">
                 <Link
                   href={`/hidden-india/${state.slug}`}
                   className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-400 text-stone-950 font-bold text-xs uppercase tracking-wider shadow-md hover:bg-amber-300 transition-all"
@@ -164,10 +162,19 @@ export default function DistrictDetailPage() {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {places.map((place, idx) => (
-                <HiddenPlaceCard key={place.id} place={place} index={idx} />
-              ))}
+            <div className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {places.map((place, idx) => (
+                  <HiddenPlaceCard key={place.id} place={place} index={idx} />
+                ))}
+              </div>
+
+              {/* Exact Unmapped Destination Notice when detailed content is still being curated */}
+              {hasUnmappedPlaces && (
+                <div className="pt-2">
+                  <UnmappedDestinationNotice districtName={district.name} />
+                </div>
+              )}
             </div>
           )}
         </section>
