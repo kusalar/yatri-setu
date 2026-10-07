@@ -15,6 +15,18 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     shortDescription: 'Ancient Harappan metropolis situated on Khadir Bet island, surrounded by the stark white expanse of the Great Rann.',
     image: 'https://images.unsplash.com/photo-1599827552599-ea9a039d93ee?auto=format&fit=crop&w=1600&q=80',
     imageAlt: 'Excavated stone reservoirs and ancient Harappan ruins at Dholavira, Khadir Bet, Kachchh, Gujarat',
+    gallery: [
+      {
+        src: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
+        alt: 'White salt desert horizon of the Great Rann near Khadir Bet',
+        caption: 'White desert expanse surrounding Khadir Bet island'
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1599827552599-ea9a039d93ee?auto=format&fit=crop&w=1200&q=80',
+        alt: 'Harappan monumental stone masonry and excavated city gates',
+        caption: 'Bronze Age stone masonry citadel and rock-cut reservoirs'
+      }
+    ],
     category: 'Heritage',
     tags: ['UNESCO WORLD HERITAGE', 'HARAPPAN CIVILIZATION', 'KHADIR BET', 'ANCIENT WATER SYSTEM'],
     bestTime: 'October to March',
@@ -97,6 +109,13 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     shortDescription: 'A living artisan settlement preserving the rare centuries-old Rogan castor-oil art, copper bells, and lacquer woodwork.',
     image: 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1600&q=80',
     imageAlt: 'Traditional master artisan Rogan painting and copper bell crafting at Nirona village, Kachchh, Gujarat',
+    gallery: [
+      {
+        src: 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1200&q=80',
+        alt: 'Rogan painting demonstration using castor oil pigment on fabric',
+        caption: 'Intricate freehand Rogan motif work with metal stylus'
+      }
+    ],
     category: 'Craft',
     tags: ['ROGAN ART', 'COPPER BELLS', 'LACQUER CRAFT', 'ARTISAN GUILDS'],
     bestTime: 'October to March',
@@ -241,8 +260,20 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     districtSlug: 'darjeeling',
     districtName: 'Darjeeling',
     shortDescription: 'A serene Himalayan eco-village at 7,887 ft within Senchal Wildlife Sanctuary, offering panoramic Kanchenjunga sunrises.',
-    image: '/hidden-india/chatakpur.jpg',
-    imageAlt: 'Chatakpur mountain eco-village overlooking Kanchenjunga ridge in Senchal Wildlife Sanctuary, Darjeeling, West Bengal',
+    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80',
+    imageAlt: 'Misty mountain ridge and alpine forest of Senchal Wildlife Sanctuary at Chatakpur, Darjeeling, West Bengal',
+    gallery: [
+      {
+        src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
+        alt: 'Mount Kanchenjunga dawn panorama from Chatakpur watchtower',
+        caption: 'Sunrise over Kanchenjunga from the village watchtower'
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80',
+        alt: 'Protected Senchal pine canopy forest trail',
+        caption: 'Ancient cryptomeria and oak trails of Senchal'
+      }
+    ],
     category: 'Village',
     tags: ['7,887 FT', 'KANCHENJUNGA VIEWS', 'ECO-VILLAGE', 'HOMESTAYS'],
     bestTime: 'October to May',
@@ -318,8 +349,15 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     districtSlug: 'darjeeling',
     districtName: 'Darjeeling',
     shortDescription: 'A silent pine-forest hamlet at 6,959 ft, known for dense oak canopies, bird calls, and panoramic Kanchenjunga tranquility.',
-    image: '/hidden-india/lepchajagat.jpg',
+    image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1600&q=80',
     imageAlt: 'Coniferous pine forest trails and misty mountain sanctuary at Lepchajagat, Darjeeling, West Bengal',
+    gallery: [
+      {
+        src: 'https://images.unsplash.com/photo-1511497584788-87676104235f?auto=format&fit=crop&w=1200&q=80',
+        alt: 'Misty forest walking path through tall pines in Lepchajagat',
+        caption: 'Quiet coniferous trail along Hawa Ghar ridge'
+      }
+    ],
     category: 'Nature',
     tags: ['6,959 FT', 'PINE FORESTS', 'LEPCHA HERITAGE', 'BIRD SANCTUARY'],
     bestTime: 'October to April',
@@ -386,8 +424,15 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     districtSlug: 'jalpaiguri',
     districtName: 'Jalpaiguri',
     shortDescription: 'Expansive Teesta river wetlands hosting winter migratory birds, scenic country boat rides, and Baikunthapur forest views.',
-    image: '/hidden-india/gajoldoba.jpg',
+    image: 'https://images.unsplash.com/photo-1511497584788-87676104235f?auto=format&fit=crop&w=1600&q=80',
     imageAlt: 'Teesta barrage wetlands and winter migratory waterfowl sanctuary at Gajoldoba, Jalpaiguri, West Bengal',
+    gallery: [
+      {
+        src: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
+        alt: 'Quiet morning water surface at Teesta reservoir',
+        caption: 'Teesta reservoir wetlands during winter migratory season'
+      }
+    ],
     category: 'Nature',
     tags: ['TEESTA RESERVOIR', 'MIGRATORY BIRDS', 'DOOARS FORESTS', 'WETLAND ESCAPE'],
     bestTime: 'November to March',
@@ -454,8 +499,15 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     districtSlug: 'alipurduar',
     districtName: 'Alipurduar',
     shortDescription: 'Historic hill fortress tucked inside Buxa Tiger Reserve, surrounded by dense sub-Himalayan rainforests and Bhutan border trails.',
-    image: '/hidden-india/buxa-fort.jpg',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80',
     imageAlt: 'Historic stone fortress ruins and Dooars hill trails in Buxa Tiger Reserve, Alipurduar, West Bengal',
+    gallery: [
+      {
+        src: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80',
+        alt: 'Dense rainforest canopy of Buxa Tiger Reserve trail',
+        caption: 'Forested climb from Santalabari to the fort'
+      }
+    ],
     category: 'Heritage',
     tags: ['BUXA TIGER RESERVE', 'COLONIAL FORTRESS', 'HIKING TRAILS', 'DOOARS RAINFOREST'],
     bestTime: 'October to April',
@@ -522,8 +574,15 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     districtSlug: 'purba-bardhaman',
     districtName: 'Purba Bardhaman',
     shortDescription: 'A serene rural Bengal heritage hamlet featuring 350-year-old terracotta temples, an ancestral Baithak-khana mansion, and lotus ponds.',
-    image: '/hidden-india/amadpur.jpg',
+    image: 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1600&q=80',
     imageAlt: 'Ancient terracotta temples and restored Baithak-khana mansion at Amadpur village, Purba Bardhaman, West Bengal',
+    gallery: [
+      {
+        src: 'https://images.unsplash.com/photo-1599827552599-ea9a039d93ee?auto=format&fit=crop&w=1200&q=80',
+        alt: 'Carved terracotta brick frieze details depicting epic lore',
+        caption: '17th-century terracotta panels on Aatchala temple'
+      }
+    ],
     category: 'Heritage',
     tags: ['TERRACOTTA TEMPLES', 'HERITAGE MANSION', 'RURAL BENGAL', 'LOTUS DIGHI'],
     bestTime: 'July to March',
@@ -596,6 +655,13 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     shortDescription: 'Dramatic billion-year-old granite hills where wild leopards, Rabari pastoralists, and seasonal migratory birds coexist harmoniously.',
     image: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
     imageAlt: 'Granite boulder hills and Rabari pastoral landscape at Jawai Bandh, Pali, Rajasthan',
+    gallery: [
+      {
+        src: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80',
+        alt: 'Ancient granite boulder landscape around Jawai reservoir',
+        caption: '850-million-year-old granite boulder hills of Jawai'
+      }
+    ],
     category: 'Wildlife',
     tags: ['LEOPARD CONSERVATION', 'RABARI COMMUNITY', 'GRANITE ROCK', 'ECO-TOURISM'],
     bestTime: 'October to April',
@@ -667,6 +733,13 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     shortDescription: 'Traditional apple-blossom village perched at 9,711 ft overlooking the sacred 20,000-ft Kinnaur Kailash massif.',
     image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1600&q=80',
     imageAlt: 'Kath-Kuni wooden village and apple orchards facing Kinnaur Kailash massif at Kalpa, Kinnaur, Himachal Pradesh',
+    gallery: [
+      {
+        src: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80',
+        alt: 'Kinnaur Kailash snow range viewed from Kalpa apple orchard',
+        caption: 'Kinnaur Kailash massif at sunrise'
+      }
+    ],
     category: 'Village',
     tags: ['9,711 FT', 'KINNAUR KAILASH', 'KATH-KUNI ARCHITECTURE', 'APPLE ORCHARDS'],
     bestTime: 'April to October',
@@ -739,6 +812,13 @@ export const HIDDEN_PLACES_DATA: HiddenPlace[] = [
     shortDescription: 'Lesser-known Khasi plateau famous for prehistoric marine fossil beds, natural freshwater canyon pools, and sacred forests.',
     image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80',
     imageAlt: 'Prehistoric marine fossil plateau and natural freshwater canyon pools at Mawlyngbna, East Khasi Hills, Meghalaya',
+    gallery: [
+      {
+        src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80',
+        alt: 'Lush Khasi plateau hills and natural river canyon springs',
+        caption: 'Subtropical freshwater springs of Mawlyngbna'
+      }
+    ],
     category: 'Nature',
     tags: ['PREHISTORIC FOSSILS', 'SACRED GROVES', 'CANYON POOLS', 'COMMUNITY ECO-TOURISM'],
     bestTime: 'October to April',

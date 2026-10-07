@@ -77,34 +77,34 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'west-bengal',
     tagline: 'Misty tea ridges, terracotta hamlets and coastal mangrove wilderness.',
     description: 'From high Himalayan villages in the shadows of Kanchenjunga to the quiet terracotta settlements of Rarh Bengal and the deltaic tides of the Sundarbans.',
-    heroImage: '/hidden-india/chatakpur.jpg',
+    heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('west-bengal', 'West Bengal', [
       {
         name: 'Darjeeling',
         description: 'Misty Himalayan hamlets, organic tea estates, Senchal pine forests and Kanchenjunga views.',
-        heroImage: '/hidden-india/chatakpur.jpg'
+        heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80'
       },
       {
         name: 'Jalpaiguri',
         description: 'Teesta river reservoir, Dooars wetlands, tea gardens and Baikunthapur forest trails.',
-        heroImage: '/hidden-india/gajoldoba.jpg'
+        heroImage: 'https://images.unsplash.com/photo-1511497584788-87676104235f?auto=format&fit=crop&w=1200&q=80'
       },
       {
         name: 'Alipurduar',
         description: 'Buxa Tiger Reserve, British-era hill fortress, Jayanti riverbed and Bhutan border trails.',
-        heroImage: '/hidden-india/buxa-fort.jpg'
+        heroImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80'
       },
       {
         name: 'Purba Bardhaman',
         slug: 'purba-bardhaman',
         aliases: ['bardhaman', 'burdwan'],
         description: 'Terracotta temples, 350-year-old aristocratic mansions, lotus dighis and bell-metal artisans.',
-        heroImage: '/hidden-india/amadpur.jpg'
+        heroImage: 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1200&q=80'
       },
       {
         name: 'Kalimpong',
         description: 'Orchid nurseries, Lepcha indigenous hamlets, silent river ridges and monastery trails.',
-        heroImage: '/hidden-india/lepchajagat.jpg'
+        heroImage: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80'
       },
       { name: 'Bankura', description: 'Bishnupur terracotta marvels, Dokra bell-metal artisans and Susunia hills.' },
       { name: 'Birbhum', description: 'Baul folk minstrels, red laterite soil trails, Shantiniketan artisan communes.' },

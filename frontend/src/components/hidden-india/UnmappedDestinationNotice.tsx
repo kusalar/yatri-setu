@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Compass, ShieldAlert, Sparkles, MapPin } from 'lucide-react';
+import { Compass, MapPin } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface UnmappedDestinationNoticeProps {
@@ -19,6 +19,8 @@ export function UnmappedDestinationNotice({
   className,
   compact = false
 }: UnmappedDestinationNoticeProps) {
+  const entityLabel = placeName || districtName;
+
   return (
     <div
       className={cn(
@@ -64,14 +66,14 @@ export function UnmappedDestinationNotice({
               message
             ) : (
               <>
-                Our community researchers and local panchayats are actively curating authentic, responsible stories and verified seasonal guidelines for <strong className="text-amber-300 font-semibold">{districtName}</strong>.
+                Our destination team is working to add authentic local stories and responsible travel guidance for <strong className="text-amber-300 font-semibold">{entityLabel}</strong>.
               </>
             )}
           </p>
 
           <div className="pt-2 flex items-center gap-2 text-[11px] font-mono text-stone-400">
             <span className="text-amber-400">✦</span>
-            <span>Yatri Setu verifies ground facts directly with village elders &amp; forest custodians before publishing.</span>
+            <span>Verified field data and community guidelines are prioritized to protect fragile ecosystems before publishing.</span>
           </div>
         </div>
       </div>

@@ -307,9 +307,8 @@ export default function PlaceDetailPage() {
                   <div className="flex items-center gap-2 text-xs font-mono font-bold text-amber-400 uppercase">
                     <BookOpen className="w-4 h-4" />
                     <span>Local Story &amp; Oral History</span>
-                  </div>
-                  <p className="text-xs text-stone-400 leading-relaxed">
-                    Still being mapped. Our community researchers record firsthand oral histories with village elders before publishing.
+                  </div>                  <p className="text-xs text-stone-400 leading-relaxed">
+                    Still being mapped. Our destination team is working to add authentic local stories and responsible travel guidance before publishing.
                   </p>
                 </div>
 
@@ -350,7 +349,7 @@ export default function PlaceDetailPage() {
              VERIFIED DESTINATION CONTENT (FULL DETAIL)
              ============================================== */
           <>
-            {/* LOCAL STORY */}
+            {/* 1. LOCAL STORY */}
             {place.localStory && (
               <section className="rounded-3xl p-6 sm:p-10 bg-stone-900/70 border border-white/10 shadow-xl space-y-6">
                 <div className="space-y-2 border-b border-white/10 pb-4">
@@ -374,32 +373,60 @@ export default function PlaceDetailPage() {
                     <p key={idx}>{p}</p>
                   ))}
                 </div>
+              </section>
+            )}
 
-                {/* Community & Cultural Insights */}
-                {(place.localStory.culturalSignificance || place.localStory.communityConnection) && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-white/10">
-                    {place.localStory.culturalSignificance && (
-                      <div className="p-4 rounded-2xl bg-stone-950/60 border border-white/5 space-y-1">
-                        <div className="text-[11px] font-mono uppercase tracking-wider text-amber-400 font-bold">
-                          Cultural Significance
-                        </div>
-                        <p className="text-xs text-stone-300 leading-relaxed">
-                          {place.localStory.culturalSignificance}
-                        </p>
-                      </div>
-                    )}
-                    {place.localStory.communityConnection && (
-                      <div className="p-4 rounded-2xl bg-stone-950/60 border border-white/5 space-y-1">
-                        <div className="text-[11px] font-mono uppercase tracking-wider text-emerald-400 font-bold">
-                          Community Connection
-                        </div>
-                        <p className="text-xs text-stone-300 leading-relaxed">
-                          {place.localStory.communityConnection}
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                )}
+            {/* 2. CULTURE & COMMUNITY */}
+            {(place.localStory?.culturalSignificance ||
+              place.localStory?.communityConnection ||
+              place.moreAbout?.culture) && (
+              <section className="space-y-5">
+                <div>
+                  <span className="text-xs font-mono font-bold uppercase tracking-widest text-amber-400">
+                    LIVING TRADITIONS
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                    Culture &amp; Community
+                  </h2>
+                  <p className="text-xs sm:text-sm text-stone-400 mt-1">
+                    Generational stewardship, indigenous heritage, and community partnerships.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {place.localStory?.culturalSignificance && (
+                    <div className="p-5 rounded-2xl bg-stone-900/60 border border-white/10 space-y-2">
+                      <span className="text-[11px] font-mono uppercase tracking-wider text-amber-400 font-bold block">
+                        Cultural Significance
+                      </span>
+                      <p className="text-xs text-stone-300 leading-relaxed">
+                        {place.localStory.culturalSignificance}
+                      </p>
+                    </div>
+                  )}
+
+                  {place.localStory?.communityConnection && (
+                    <div className="p-5 rounded-2xl bg-stone-900/60 border border-white/10 space-y-2">
+                      <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-400 font-bold block">
+                        Community Stewardship
+                      </span>
+                      <p className="text-xs text-stone-300 leading-relaxed">
+                        {place.localStory.communityConnection}
+                      </p>
+                    </div>
+                  )}
+
+                  {place.moreAbout?.culture && (
+                    <div className="p-5 rounded-2xl bg-stone-900/60 border border-white/10 space-y-2">
+                      <span className="text-[11px] font-mono uppercase tracking-wider text-amber-300 font-bold block">
+                        Local Heritage &amp; Lore
+                      </span>
+                      <p className="text-xs text-stone-300 leading-relaxed">
+                        {place.moreAbout.culture}
+                      </p>
+                    </div>
+                  )}
+                </div>
               </section>
             )}
 
@@ -545,6 +572,48 @@ export default function PlaceDetailPage() {
                       </p>
                     </div>
                   )}
+                </div>
+              </section>
+            )}
+
+            {/* ADDITIONAL IMAGERY / GALLERY */}
+            {place.gallery && place.gallery.length > 0 && (
+              <section className="space-y-5">
+                <div>
+                  <span className="text-xs font-mono font-bold uppercase tracking-widest text-amber-400">
+                    VISUAL PERSPECTIVES
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                    Atmosphere of {place.name}
+                  </h2>
+                  <p className="text-xs sm:text-sm text-stone-400 mt-1">
+                    Verified visual perspectives from the surrounding sanctuary landscape.
+                  </p>
+                </div>
+
+                <div className={`grid grid-cols-1 ${place.gallery.length > 1 ? 'sm:grid-cols-2' : ''} gap-5`}>
+                  {place.gallery.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="group relative rounded-3xl overflow-hidden border border-white/10 bg-stone-900/40 shadow-xl"
+                    >
+                      <div className="relative h-64 sm:h-72 w-full">
+                        <ImageWithSkeleton
+                          src={item.src}
+                          alt={item.alt}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/20 to-transparent" />
+                        {item.caption && (
+                          <div className="absolute bottom-4 left-4 right-4">
+                            <p className="text-xs font-mono text-stone-200 backdrop-blur-md bg-stone-950/70 px-3 py-1.5 rounded-xl border border-white/10 inline-block">
+                              {item.caption}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </section>
             )}
