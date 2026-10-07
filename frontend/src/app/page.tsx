@@ -277,14 +277,13 @@ export default function HomePage() {
                   asChild
                   className="rounded-xl border-amber-400/50 bg-stone-900/70 hover:bg-stone-900/95 text-white hover:text-amber-300 hover:border-amber-400 font-bold px-7 h-12 text-base sm:text-lg shadow-lg shadow-amber-500/10 backdrop-blur-md transition-all group"
                 >
-                  <a
-                    href="#hidden-india"
-                    onClick={scrollToHiddenIndia}
+                  <Link
+                    href="/hidden-india"
                     className="text-white hover:text-amber-300 inline-flex items-center gap-2"
                   >
                     <span className="text-amber-400 group-hover:rotate-12 transition-transform">✦</span>
                     <span>Hidden India</span>
-                  </a>
+                  </Link>
                 </Button>
               </MagneticButton>
             </div>
