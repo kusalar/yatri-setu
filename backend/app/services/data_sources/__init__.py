@@ -6,7 +6,11 @@ from app.services.data_sources.base import BaseDataSourceProvider, DataSourceRea
 from app.services.data_sources.tourism_data import tourism_data_provider, MockTourismDataProvider
 from app.services.data_sources.accommodation_data import accommodation_data_provider, MockAccommodationDataProvider
 from app.services.data_sources.booking_demand import booking_demand_provider, MockBookingDemandProvider
-from app.services.data_sources.search_demand import search_demand_provider, MockSearchDemandProvider
+from app.services.data_sources.search_demand import (
+    search_demand_provider,
+    MockSearchDemandProvider,
+    FirstPartySearchDemandProvider,
+)
 from app.services.data_sources.events_data import event_data_provider, MockEventDataProvider
 from app.services.data_sources.holiday_data import holiday_data_provider, MockHolidayDataProvider
 from app.services.data_sources.traffic_data import traffic_data_provider, MockTrafficDataProvider
@@ -23,6 +27,7 @@ __all__ = [
     "MockBookingDemandProvider",
     "search_demand_provider",
     "MockSearchDemandProvider",
+    "FirstPartySearchDemandProvider",
     "event_data_provider",
     "MockEventDataProvider",
     "holiday_data_provider",
