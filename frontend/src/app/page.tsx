@@ -264,7 +264,7 @@ export default function HomePage() {
               </MagneticButton>
               <MagneticButton>
                 <Button variant="outline" asChild className="rounded-xl border-white/30 bg-stone-900/60 hover:bg-stone-900/90 text-white hover:text-amber-300 hover:border-amber-400/50 font-bold px-7 h-12 text-base sm:text-lg shadow-md backdrop-blur-md transition-all">
-                  <Link href="#hidden-india" className="text-white hover:text-amber-300">Hidden India</Link>
+                  <Link href="/hidden-india" className="text-white hover:text-amber-300">Hidden India</Link>
                 </Button>
               </MagneticButton>
             </div>
