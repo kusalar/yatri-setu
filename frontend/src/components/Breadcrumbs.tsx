@@ -24,8 +24,7 @@ export function Breadcrumbs() {
       case 'sos': return 'SOS Telemetry';
       case 'booking': return 'Booking';
       case 'confirmation': return 'Confirmation';
-      case 'hidden-india': return 'Hidden India';
-      default: return seg.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+      default: return seg.charAt(0).toUpperCase() + seg.slice(1).replace(/-/g, ' ');
     }
   };
 
