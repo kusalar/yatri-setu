@@ -23,7 +23,6 @@ const editorialFont = Cormorant_Garamond({
   subsets: ['latin'],
   variable: '--font-serif',
   display: 'swap',
-  style: ['normal', 'italic'],
   weight: ['400', '500', '600', '700']
 });
 
