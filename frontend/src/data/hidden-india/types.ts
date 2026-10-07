@@ -49,6 +49,12 @@ export interface MoreAboutPlace {
   crafts?: string;
 }
 
+export interface GalleryImage {
+  src: string;
+  alt: string;
+  caption?: string;
+}
+
 export interface HiddenPlace {
   id: string;
   name: string;
@@ -58,8 +64,9 @@ export interface HiddenPlace {
   districtSlug: string;
   districtName: string;
   shortDescription: string;
-  image: string;
+  image?: string;
   imageAlt?: string;
+  gallery?: GalleryImage[];
   category: HiddenPlaceCategory;
   tags: string[];
   isUnmapped?: boolean;
@@ -84,7 +91,7 @@ export interface DistrictInfo {
   stateSlug: string;
   stateName: string;
   description: string;
-  heroImage: string;
+  heroImage?: string;
   categories?: HiddenPlaceCategory[];
   aliases?: string[];
 }
@@ -95,6 +102,6 @@ export interface StateInfo {
   slug: string;
   tagline: string;
   description: string;
-  heroImage: string;
+  heroImage?: string;
   districts: DistrictInfo[];
 }

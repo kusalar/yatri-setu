@@ -15,7 +15,7 @@ const createDistricts = (
       stateSlug,
       stateName,
       description: item.description || `Explore the lesser-known landscapes, indigenous craft roots and tranquil settlements of ${item.name}.`,
-      heroImage: item.heroImage || '/hero-himalaya.jpg',
+      heroImage: item.heroImage,
       aliases: item.aliases || [],
     };
   });
@@ -28,7 +28,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'gujarat',
     tagline: 'Salt deserts, craft traditions and ancient maritime horizons.',
     description: 'Beyond the commercial corridors lie endless salt flats, fossil-rich islands, tribal forest settlements in Dang, and centuries-old artisan guilds.',
-    heroImage: 'https://images.unsplash.com/photo-1599827552599-ea9a039d93ee?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('gujarat', 'Gujarat', [
       { name: 'Ahmedabad', description: 'Terracotta pol lanes, stepwells and Sabarmati craft corridors.' },
       { name: 'Amreli', description: 'Savanna plains and pastoral grasslands bordering Gir sanctuary.' },
@@ -40,7 +39,7 @@ export const STATES_DATA: StateInfo[] = [
       { name: 'Botad', description: 'Rolling Kathiawar farmlands and historic devotional retreats.' },
       { name: 'Chhota Udepur', description: 'Rathwa tribal heartland renowned for sacred Pithora wall murals.' },
       { name: 'Dahod', description: 'Bhil community hills, maize terraces and folk beadcraft.' },
-      { name: 'Dang', description: 'Dense Sahyadri bamboo forests, monsoon waterfalls and Warli tribal hamlets.', heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80' },
+      { name: 'Dang', description: 'Dense Sahyadri bamboo forests, monsoon waterfalls and Warli tribal hamlets.' },
       { name: 'Devbhoomi Dwarka', description: 'Remote coastal cliffs, coral shoals and maritime heritage.' },
       { name: 'Gandhinagar', description: 'Lush riverine ravines and monumental stone craftsmanship.' },
       { name: 'Gir Somnath', description: 'Asiatic lion territory, secluded fishing coves and coastal cliffs.' },
@@ -51,7 +50,6 @@ export const STATES_DATA: StateInfo[] = [
         slug: 'kutch',
         aliases: ['kachchh', 'kutch'],
         description: 'Vast white salt desert, Rogan art masters, fossil beds and resilient desert hamlets.',
-        heroImage: 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1200&q=80'
       },
       { name: 'Kheda', description: 'Historic tobacco and spice farming hamlets of central Gujarat.' },
       { name: 'Mahisagar', description: 'Fossilized dinosaur nesting grounds and Mahi river gorges.' },
@@ -77,34 +75,28 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'west-bengal',
     tagline: 'Misty tea ridges, terracotta hamlets and coastal mangrove wilderness.',
     description: 'From high Himalayan villages in the shadows of Kanchenjunga to the quiet terracotta settlements of Rarh Bengal and the deltaic tides of the Sundarbans.',
-    heroImage: '/hidden-india/chatakpur.jpg',
     districts: createDistricts('west-bengal', 'West Bengal', [
       {
         name: 'Darjeeling',
         description: 'Misty Himalayan hamlets, organic tea estates, Senchal pine forests and Kanchenjunga views.',
-        heroImage: '/hidden-india/chatakpur.jpg'
       },
       {
         name: 'Jalpaiguri',
         description: 'Teesta river reservoir, Dooars wetlands, tea gardens and Baikunthapur forest trails.',
-        heroImage: '/hidden-india/gajoldoba.jpg'
       },
       {
         name: 'Alipurduar',
         description: 'Buxa Tiger Reserve, British-era hill fortress, Jayanti riverbed and Bhutan border trails.',
-        heroImage: '/hidden-india/buxa-fort.jpg'
       },
       {
         name: 'Purba Bardhaman',
         slug: 'purba-bardhaman',
         aliases: ['bardhaman', 'burdwan'],
         description: 'Terracotta temples, 350-year-old aristocratic mansions, lotus dighis and bell-metal artisans.',
-        heroImage: '/hidden-india/amadpur.jpg'
       },
       {
         name: 'Kalimpong',
         description: 'Orchid nurseries, Lepcha indigenous hamlets, silent river ridges and monastery trails.',
-        heroImage: '/hidden-india/lepchajagat.jpg'
       },
       { name: 'Bankura', description: 'Bishnupur terracotta marvels, Dokra bell-metal artisans and Susunia hills.' },
       { name: 'Birbhum', description: 'Baul folk minstrels, red laterite soil trails, Shantiniketan artisan communes.' },
@@ -132,7 +124,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'rajasthan',
     tagline: 'Granite hills, pastoral nomadic routes and hidden desert wells.',
     description: 'Step past crowded palace tours into granite crags where Rabari shepherds live beside wild leopards, stepwells hidden in desert shrubs, and block-print villages.',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('rajasthan', 'Rajasthan', [
       { name: 'Pali', description: 'Jawai granite formations, Rabari pastoral life, leopard sanctuaries.' },
       { name: 'Barmer', description: 'Wood carving artisans, desert dunes, Meghwal embroidery traditions.' },
@@ -152,7 +143,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'himachal-pradesh',
     tagline: 'High cold deserts, sacred cedar groves and stone-wood architecture.',
     description: 'Beyond Shimla and Manali lie high altitude Trans-Himalayan valleys, mud-brick monasteries clinging to crags, and Kath-Kuni wooden villages.',
-    heroImage: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('himachal-pradesh', 'Himachal Pradesh', [
       { name: 'Kinnaur', description: 'Apple blossom valleys, Kinnaur Kailash mountain vistas, slate architecture.' },
       { name: 'Lahaul and Spiti', description: 'Ancient Tibetan Buddhist monasteries, high fossil plateaus, cold desert serenity.' },
@@ -169,7 +159,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'kerala',
     tagline: 'Western Ghat sholas, sacred groves and riverine indigenous forests.',
     description: 'Untangled from the tourist beaches are sacred Kavu groves, high altitude shola grasslands, spice-scented tribal settlements, and quiet river deltas.',
-    heroImage: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('kerala', 'Kerala', [
       { name: 'Wayanad', description: 'Ancient prehistoric edakkal petroglyphs, bamboo forests and tribal farmsteads.' },
       { name: 'Idukki', description: 'High misty Cardamom hills, shola evergreen canopies and indigenous tea gardens.' },
@@ -185,7 +174,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'meghalaya',
     tagline: 'Living root bridges, cloud forests and limestone subterranean wonders.',
     description: 'High cloud plateaus where Khasi and Jaintia communities cultivate living fig root bridges, sacred forest groves, and pristine river canyons.',
-    heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('meghalaya', 'Meghalaya', [
       { name: 'East Khasi Hills', description: 'Sacred groves of Mawphlang, fossil ridges of Mawlyngbna, crystal streams.' },
       { name: 'West Jaintia Hills', description: 'Krang Shuri waterfalls, sacred monolith clusters and terraced paddy fields.' },
@@ -199,7 +187,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'sikkim',
     tagline: 'Sacred lakes, rhododendron sanctuaries and organic mountain communes.',
     description: 'India’s first 100% organic state, sheltering sacred lakes nestled below Mt. Kanchenjunga, cardamom forests, and tranquil monastic retreats.',
-    heroImage: 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('sikkim', 'Sikkim', [
       { name: 'North Sikkim', description: 'Yumthang rhododendron valley, Gurudongmar high altitude sacred waters.' },
       { name: 'West Sikkim', description: 'Historic coronation throne of Yuksom, Dzongri mountain trails, silent gompas.' },
@@ -213,7 +200,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'uttarakhand',
     tagline: 'Alpine bugyals, stone roof hamlets and Himalayan rivers.',
     description: 'Gentle Himalayan trails leading to highland meadows (bugyals), Kumaoni wooden carved homes, and tranquil river confluences.',
-    heroImage: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('uttarakhand', 'Uttarakhand', [
       { name: 'Pithoragarh', description: 'Kumaon frontier valleys, snow peaks of Panchachuli and alpine herb meadows.' },
       { name: 'Chamoli', description: 'Valley of flowers buffer zones, Nanda Devi biosphere hamlets and bugyals.' },
@@ -228,7 +214,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'madhya-pradesh',
     tagline: 'Sal heartlands, prehistoric rock shelters and Gond tribal paintings.',
     description: 'Dense deciduous sal woodlands, prehistoric rock art older than civilization, and Gond tribal artists whose paintings celebrate the rhythm of the forest.',
-    heroImage: 'https://images.unsplash.com/photo-1599827552599-ea9a039d93ee?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('madhya-pradesh', 'Madhya Pradesh', [
       { name: 'Dindori', description: 'Heartland of Gond tribal painting, baiga forest dwellers and serene Narmada waters.' },
       { name: 'Raisen', description: 'Bhimbetka Stone Age cave shelters, Bhojpur massive lingam architecture.' },
@@ -242,7 +227,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'odisha',
     tagline: 'Coastal mangrove sanctuaries, Dokra artisan villages and sacred handlooms.',
     description: 'Ancient Kalinga maritime lore, secluded Chilika wetland islands, artisan villages where every family paints Raghurajpur scrolls, and pristine beaches.',
-    heroImage: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('odisha', 'Odisha', [
       { name: 'Puri', description: 'Raghurajpur heritage craft village, Patachitra scrolls and tranquil mangrove coasts.' },
       { name: 'Kendrapara', description: 'Bhitarkanika estuarine crocodile sanctuary, mangrove delta labyrinths.' },
@@ -256,7 +240,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'karnataka',
     tagline: 'Western Ghat coffee hills, Hoysala stone poetry and Deccan plains.',
     description: 'Hidden Hoysala stone temples carved in intricate chloritic schist, ancient Western Ghat rain forests, and Malnad coffee plantations.',
-    heroImage: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('karnataka', 'Karnataka', [
       { name: 'Chikkamagaluru', description: 'Bababudan giri coffee slopes, Mullayanagiri ridge trails and pristine sholas.' },
       { name: 'Hassan', description: 'Lesser-known Hoysala temples in Koravangala and Mosale, silent paddy basins.' },
@@ -270,7 +253,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'tamil-nadu',
     tagline: 'Chettinad mansion courtyards, Nilgiri sholas and temple sculptors.',
     description: 'Vast mansions built with Burma teak and Italian marble in rural Chettinad, secluded Toda tribal hamlets in the Nilgiris, and sacred bronze casting towns.',
-    heroImage: 'https://images.unsplash.com/photo-1599827552599-ea9a039d93ee?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('tamil-nadu', 'Tamil Nadu', [
       { name: 'Sivaganga', description: 'Chettinad heritage mansions, Athangudi handmade cement tile kilns, culinary roots.' },
       { name: 'Nilgiris', description: 'Toda buffalo pastures, endemic shola forests and silent mountain lakes.' },
@@ -284,7 +266,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'assam',
     tagline: 'River islands, golden Muga silk looms and Brahmaputra floodplains.',
     description: 'Majuli, the world’s largest river island with its Vaishnavite monasteries, the wild marshes of Kaziranga buffer zones, and golden Muga silk weavers.',
-    heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('assam', 'Assam', [
       { name: 'Majuli', description: 'Brahmaputra river island, Neo-Vaishnavite Satra culture and mask-making craft.' },
       { name: 'Dima Hasao', description: 'Haflong blue hills, Jatinga ridges and Dimasa tribal wooden hamlets.' },
@@ -297,7 +278,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'arunachal-pradesh',
     tagline: 'Dawn-lit mountain borders, sacred valleys and tribal bamboo architectures.',
     description: 'Land of the dawn-lit mountains where Monpa, Apatani and Adi communities live in ecological harmony among snow ridges and pine canyons.',
-    heroImage: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('arunachal-pradesh', 'Arunachal Pradesh', [
       { name: 'Lower Subansiri', description: 'Ziro valley, UNESCO-nominated Apatani organic rice-cum-fish farming and pine ridges.' },
       { name: 'West Kameng', description: 'Sangti valley black-necked crane sanctuary, Dirang stone architecture.' },
@@ -310,7 +290,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'manipur',
     tagline: 'Floating lake phumdis, black pottery and sacred forest groves.',
     description: 'Loktak lake’s floating islands, Tangkhul black pottery in Longpi, and misty border hillocks of serene cultural resilience.',
-    heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('manipur', 'Manipur', [
       { name: 'Bishnupur', description: 'Loktak lake floating circular phumdis, Keibul Lamjao sangai sanctuary.' },
       { name: 'Ukhrul', description: 'Longpi serpentine stone black pottery craft, Shirui lily peaks.' }
@@ -322,7 +301,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'mizoram',
     tagline: 'Blue mountain ridges, bamboo forests and community brotherhood.',
     description: 'Emerald hill folds with high community unity (Tlawmngaihna), bamboo-crafted homes, and cloud-draped mountain passes.',
-    heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('mizoram', 'Mizoram', [
       { name: 'Champhai', description: 'Vineyard hills overlooking Myanmar, Rih Dil lake legend and pine ridges.' },
       { name: 'Aizawl', description: 'Quiet hilltop settlements, traditional handloom bazaars and cloud horizons.' }
@@ -334,7 +312,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'nagaland',
     tagline: 'Living green villages, ancestral warrior clans and mountain valleys.',
     description: 'Khonoma’s community-conserved green forests, Dzukou lily valleys, and ancestral Angami terrace farming systems.',
-    heroImage: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('nagaland', 'Nagaland', [
       { name: 'Kohima', description: 'Khonoma Asia’s first green village, alder-based sustainable agriculture.' },
       { name: 'Mon', description: 'Konyak ancestral longhouses, brass bead artisans and misty border hills.' }
@@ -346,7 +323,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'tripura',
     tagline: 'Rock-cut holy reliefs, lake palaces and bamboo craft guilds.',
     description: 'Unakoti’s massive Bas-relief rock carvings hidden in forest hills, floating water palaces, and exquisite bamboo handicrafts.',
-    heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('tripura', 'Tripura', [
       { name: 'Unakoti', description: 'Ancient monumental rock-carved Shaivite faces sculpted along deep jungle streams.' },
       { name: 'Sepahijala', description: 'Clouded leopard sanctuary, rubber plantations and serene lakes.' }
@@ -358,7 +334,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'goa',
     tagline: 'Spice valleys, Western Ghat waterfalls and ancestral backwater islands.',
     description: 'Far away from crowded tourist beaches: Divar Island backwaters, Netravali bubbling lakes, and Sahyadri spice plantations.',
-    heroImage: 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('goa', 'Goa', [
       { name: 'North Goa', description: 'Divar Island ferry crossings, Chorão mangrove bird sanctuaries, spice plantations.' },
       { name: 'South Goa', description: 'Netravali bubbling lake, Cotigao tree canopies, secluded stone stepwells.' }
@@ -370,7 +345,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'maharashtra',
     tagline: 'Sahyadri basalt fortresses, sacred forest groves and coastal Konkan.',
     description: 'Ancient rock-cut Buddhist caves hidden in misty Sahyadri folds, quiet Konkan red-tile villages, and sacred Devrai forest sanctuaries.',
-    heroImage: 'https://images.unsplash.com/photo-1599827552599-ea9a039d93ee?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('maharashtra', 'Maharashtra', [
       { name: 'Sindhudurg', description: 'Konkan coastal forts, Malvani cuisine, backwater mangroves and wooden toy makers.' },
       { name: 'Satara', description: 'Kaas UNESCO plateau of wild seasonal flowers, Koyna valley forest trails.' },
@@ -384,7 +358,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'chhattisgarh',
     tagline: 'Bastar bell-metal artisans, Chitrakote horseshoe cascades and Sal forests.',
     description: 'Ancient tribal weekly haats, lost-wax bronze casting traditions, subterranean limestone caves, and wide river cataracts.',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('chhattisgarh', 'Chhattisgarh', [
       { name: 'Bastar', description: 'Chitrakote horseshoe waterfall, Dokra brass sculptors and terracotta shrines.' },
       { name: 'Dantewada', description: 'Bailadila scenic ridges, Dholkal Ganesha mountain summit, tribal culture.' }
@@ -396,7 +369,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'jharkhand',
     tagline: 'Sohrai mural villages, Netarhat pine plateaus and sacred waterfalls.',
     description: 'Hazaribagh villages adorned with indigenous Sohrai and Khovar painted walls, dense sal valleys, and serene highland plateaus.',
-    heroImage: 'https://images.unsplash.com/photo-1599827552599-ea9a039d93ee?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('jharkhand', 'Jharkhand', [
       { name: 'Hazaribagh', description: 'Indigenous Sohrai mural painter villages, forest rock art caves of Isco.' },
       { name: 'Latehar', description: 'Netarhat Queen of Chotanagpur, Magnolia point sunsets and pine trails.' }
@@ -408,7 +380,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'bihar',
     tagline: 'Ancient Nalanda scholastic ruins, Madhubani artisan courtyards and mango groves.',
     description: 'Explore the heartland where Buddhist universities once taught the ancient world, villages where every home paints Madhubani legends, and tranquil mango orchards.',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('bihar', 'Bihar', [
       { name: 'Madhubani', description: 'Ranti and Jitwarpur villages where master women artists preserve Mithila wall painting.' },
       { name: 'Nalanda', description: 'Ruins of the world’s first residential university, Rajgir bamboo groves.' },
@@ -421,7 +392,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'uttar-pradesh',
     tagline: 'Ancient clay pottery towns, Bundelkhand fortresses and Terai forests.',
     description: 'Venture beyond the Taj Mahal to Nizamabad black pottery kilns, Dudhwa’s wild Terai swamp deer marshes, and Chunar stone-carver ghats.',
-    heroImage: 'https://images.unsplash.com/photo-1599827552599-ea9a039d93ee?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('uttar-pradesh', 'Uttar Pradesh', [
       { name: 'Azamgarh', description: 'Nizamabad black clay pottery decorated with silver zinc floral engravings.' },
       { name: 'Lakhimpur Kheri', description: 'Dudhwa National Park, pristine Terai grassland sal forest and Tharu tribal life.' },
@@ -434,7 +404,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'punjab',
     tagline: 'Tranquil canal farmlands, Phulkari needlecraft and sacred wetlands.',
     description: 'Vast golden wheat and mustard fields crisscrossed by historic canals, rural Harike wetland flyways, and Phulkari embroidery artisans.',
-    heroImage: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('punjab', 'Punjab', [
       { name: 'Tarn Taran', description: 'Harike Pattan confluence wetland, winter migratory birds and historic gurudwaras.' },
       { name: 'Hoshiarpur', description: 'Shivalik foothills, wooden inlay artisans and fragrant citrus orchards.' }
@@ -446,7 +415,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'haryana',
     tagline: 'Morni Shivalik pine hills, Sultanpur migratory lakes and stepwells.',
     description: 'Serene pine ridges at Morni Hills, ancient Indus Valley excavation mounds at Rakhigarhi, and quiet agricultural stepwells.',
-    heroImage: 'https://images.unsplash.com/photo-1599827552599-ea9a039d93ee?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('haryana', 'Haryana', [
       { name: 'Panchkula', description: 'Morni Hills pine forest trails, Tikkar Taal lakes and ancient fortresses.' },
       { name: 'Hisar', description: 'Rakhigarhi Harappan archaeological wonders and historic Firoz Shah stepwells.' }
@@ -458,7 +426,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'andhra-pradesh',
     tagline: 'Eastern Ghat coffee valleys, Kalamkari craft and Gandikota gorges.',
     description: 'The dramatic red rock canyon of Gandikota over the Penna river, Araku valley tribal organic coffee groves, and hand-block Kalamkari guilds.',
-    heroImage: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('andhra-pradesh', 'Andhra Pradesh', [
       { name: 'YSR Kadapa', description: 'Gandikota Grand Canyon of India, Belum underground cave labyrinths.' },
       { name: 'Alluri Sitharama Raju', description: 'Araku valley coffee plantations, Borra caves and indigenous tribal culture.' }
@@ -470,7 +437,6 @@ export const STATES_DATA: StateInfo[] = [
     slug: 'telangana',
     tagline: 'Kakatiya stone gateways, Pochampally ikat looms and basalt hill forts.',
     description: 'Intricate 1,000-pillar stone temple architecture, master Pochampally ikat weavers in tranquil rural weaver hamlets, and rocky Deccan hill forts.',
-    heroImage: 'https://images.unsplash.com/photo-1599827552599-ea9a039d93ee?auto=format&fit=crop&w=1600&q=80',
     districts: createDistricts('telangana', 'Telangana', [
       { name: 'Yadadri Bhuvanagiri', description: 'Pochampally heritage ikat silk weaving commune and Bhongir monolithic rock fort.' },
       { name: 'Mulugu', description: 'UNESCO Ramappa temple floating lightweight bricks, Laknavaram hanging rope bridge.' }
