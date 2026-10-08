@@ -67,7 +67,7 @@ function HomestaysContent() {
         <div>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 font-bold text-xs uppercase tracking-wider mb-2">
             <HeartHandshake className="w-3.5 h-3.5" />
-            <span>Regenerative Rural Livelihoods • SIH 2026</span>
+            <span>Regenerative Rural Livelihoods</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
             Verified Rural & Panchayat Homestays

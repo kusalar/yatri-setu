@@ -104,7 +104,7 @@ export default function PanchayatPortalPage() {
                   <span className="text-[10px] uppercase tracking-widest font-black bg-emerald-500/20 text-emerald-300 px-2.5 py-0.5 rounded border border-emerald-500/40">
                     Civic Administrative Portal
                   </span>
-                  <span className="text-xs text-stone-400 font-mono">SIH &apos;26 GOV NODE</span>
+                  <span className="text-xs text-stone-400 font-mono">PANCHAYAT NODE</span>
                   {dashboard?.provenance && (
                     <span className="text-[9px] bg-stone-800 text-stone-300 px-2 py-0.5 rounded border border-stone-700 font-mono">
                       {dashboard.provenance}

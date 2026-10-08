@@ -9,7 +9,6 @@ import {
   Shield,
   MapPin,
   Clock,
-  CheckCircle2,
   Leaf,
   Users,
   AlertTriangle,
@@ -977,11 +976,6 @@ export function HowYatriSetuWorks() {
               </div>
 
               <div className="pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 text-[10px] font-mono uppercase text-stone-400">
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />
-                  <span>SMART INDIA HACKATHON 2026</span>
-                </div>
-                <span className="text-stone-700 hidden sm:inline">•</span>
                 <div className="flex items-center gap-1.5">
                   <Leaf className="w-3.5 h-3.5 text-emerald-400" />
                   <span>REGENERATIVE TOURISM ARCHITECTURE</span>

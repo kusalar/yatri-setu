@@ -227,7 +227,7 @@ export default function HomePage() {
 
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-amber-500/40 text-amber-300 text-xs font-semibold tracking-wide font-mono shadow-md">
                 <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                <span>SIH 2026 Core Solution</span>
+                <span>Core Flow Solution</span>
               </div>
             </div>
           </div>

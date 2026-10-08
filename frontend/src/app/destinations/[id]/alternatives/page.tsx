@@ -212,7 +212,7 @@ function AlternativesContent() {
                 <span>Crowd Pressure: {originCrowdScore}/100</span>
               </span>
               <span className="px-3 py-1 rounded-full bg-white/10 text-[10px] font-bold uppercase tracking-widest text-stone-300">
-                SIH 2026 Tourist Flow Engine
+                Tourist Flow Engine
               </span>
             </div>
 

@@ -26,7 +26,7 @@ export const CrowdFactorBreakdown: React.FC<CrowdFactorBreakdownProps> = ({ fact
         </div>
 
         <span className="text-[11px] font-bold tracking-wider uppercase px-3 py-1 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300 self-start sm:self-auto border border-stone-200/60 dark:border-white/5">
-          SIH Deterministic Model
+          Deterministic Model
         </span>
       </div>
 

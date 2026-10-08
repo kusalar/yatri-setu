@@ -57,7 +57,7 @@ export default function ContactPage() {
             </div>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs sm:text-sm font-semibold font-mono shadow-xs">
               <Sparkles className="w-4 h-4 text-amber-400" />
-              <span>SIH 2026 Core Helpdesk</span>
+              <span>Core Helpdesk</span>
             </div>
           </div>
 

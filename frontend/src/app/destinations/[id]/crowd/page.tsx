@@ -77,7 +77,7 @@ export default function CrowdIntelligencePage() {
               <div>
                 <div className="flex items-center gap-2 mb-1">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-amber-400 drop-shadow-md">
-                    SIH 2026 Core Innovation
+                    Core Innovation
                   </span>
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight drop-shadow-lg">
@@ -208,7 +208,7 @@ export default function CrowdIntelligencePage() {
 
           <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-400">
             <span>Deterministic Feed • Updated: {crowd.last_updated}</span>
-            <span className="font-medium text-amber-600">Model verified for SIH 2026</span>
+            <span className="font-medium text-amber-600">Deterministic Multi-Factor Model</span>
           </div>
         </div>
       </div>

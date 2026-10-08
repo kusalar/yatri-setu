@@ -80,10 +80,6 @@ export const Footer: React.FC = () => {
                 <span className="text-stone-300 font-medium uppercase tracking-widest">
                   Himalayan Flow Intelligence
                 </span>
-                <span className="text-stone-600 hidden md:inline">•</span>
-                <span className="text-amber-400/90 font-bold hidden md:inline">
-                  SIH 2026
-                </span>
               </div>
             </div>
           </Link>
@@ -189,7 +185,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 text-center sm:text-left text-[11px]">
             <span className="font-bold text-stone-300">Yatri Setu</span>
             <span className="text-stone-700">•</span>
-            <span>© 2026 Smart India Hackathon</span>
+            <span>© 2026 Yatri Setu</span>
             <span className="text-stone-700 hidden sm:inline">•</span>
             <span className="text-stone-400">Active Decongestion & Traveler Safety</span>
           </div>

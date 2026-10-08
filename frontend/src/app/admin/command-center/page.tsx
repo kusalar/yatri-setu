@@ -3681,7 +3681,7 @@ export default function AdminCommandCenterPage() {
         <div className="border-t border-slate-800 pt-6 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-400">
           <div className="flex items-center gap-2">
             <Shield className="w-4 h-4 text-emerald-400" />
-            <span>Yatri Setu Smart India Hackathon 2026 • Destination Flow Intelligence Platform</span>
+            <span>Yatri Setu • Destination Flow Intelligence Platform</span>
           </div>
           <div className="flex items-center gap-4">
             <Link href="/panchayat" className="hover:text-white transition flex items-center gap-1">

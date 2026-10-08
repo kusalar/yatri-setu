@@ -225,7 +225,7 @@ export default function HostOnboardingPage() {
           </p>
         </div>
 
-        {/* SECTION 1: VOICE LISTING ASSISTANT (Hackathon Showcase) */}
+        {/* SECTION 1: VOICE LISTING ASSISTANT */}
         <div className="rounded-3xl bg-gradient-to-br from-amber-500/10 via-rose-500/5 to-emerald-500/10 border border-amber-500/30 p-6 sm:p-8 space-y-4 relative overflow-hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -236,7 +236,7 @@ export default function HostOnboardingPage() {
                 <h2 className="font-extrabold text-base text-slate-900 dark:text-white flex items-center gap-2">
                   <span>Voice-Assisted Listing Assistant</span>
                   <span className="text-[10px] bg-amber-500/20 text-amber-700 dark:text-amber-400 px-2 py-0.5 rounded-full font-bold uppercase">
-                    SIH AI Prototype
+                    AI Prototype
                   </span>
                 </h2>
                 <p className="text-xs text-slate-500 dark:text-slate-400">

@@ -73,7 +73,7 @@ export default function TouristDashboardPage() {
     name: 'Aarav Sharma',
     initials: 'AS',
     role: 'Verified Traveler',
-    subtitle: 'Active Eco-Citizen • SIH 2026 Smart Tourist Companion'
+    subtitle: 'Active Eco-Citizen • Smart Tourist Companion'
   };
 
   const loadData = useCallback(async (isRefresh = false) => {
