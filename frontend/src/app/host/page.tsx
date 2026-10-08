@@ -32,7 +32,7 @@ export default function HostLandingPage() {
           <div className="relative z-10 max-w-3xl space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold tracking-wider uppercase border border-amber-500/30">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>SIH 2026 • Hyperlocal Rural Economy</span>
+              <span>Hyperlocal Rural Economy</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">

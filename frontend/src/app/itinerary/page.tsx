@@ -132,7 +132,7 @@ function ItineraryPlannerContent() {
         <div>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 font-bold text-xs uppercase tracking-wider mb-2">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>SIH 2026 • Tourist Flow & Adaptive AI Engine</span>
+            <span>Tourist Flow & Adaptive AI Engine</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
             Adaptive AI Travel Intelligence
@@ -514,7 +514,7 @@ function ItineraryPlannerContent() {
               <div className="flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-amber-500" />
                 <h3 className="font-black text-base text-slate-900 dark:text-white">
-                  Change My Trip with AI (SIH Adaptive Directives)
+                  Change My Trip with AI (Adaptive Directives)
                 </h3>
               </div>
               {optimizing && (
@@ -526,7 +526,7 @@ function ItineraryPlannerContent() {
             </div>
 
             <p className="text-xs text-slate-600 dark:text-slate-300">
-              Click any SIH adaptive directive or type custom travel requirements below. The AI resequences the trip while keeping deterministic safety and pricing intact.
+              Click any adaptive directive or type custom travel requirements below. The AI resequences the trip while keeping deterministic safety and pricing intact.
             </p>
 
             {/* Directive Chips */}
@@ -674,7 +674,7 @@ function ItineraryPlannerContent() {
           {/* Interactive Day-by-Day Timeline */}
           <ItineraryTimeline days={itinerary.days} personMultiplier={numberOfTravelers} />
 
-          {/* Next Step in SIH Demo Flow: Select Homestay */}
+          {/* Next Step in Demo Flow: Select Homestay */}
           <div className="bg-amber-500/10 border-2 border-amber-500/30 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
               <h3 className="font-extrabold text-base text-slate-900 dark:text-white">

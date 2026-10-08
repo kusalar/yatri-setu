@@ -143,7 +143,7 @@ export default function DestinationDetailsPage() {
                   Critical Congestion Warning for {destination.name} (Crowd: {crowd?.crowd_score}/100)
                 </h3>
                 <span className="text-[10px] font-bold uppercase tracking-wider bg-rose-700 text-white px-2.5 py-0.5 rounded-full">
-                  SIH Flow Active
+                  Active Flow Advisory
                 </span>
               </div>
               <p className="text-xs sm:text-sm text-rose-800/90 dark:text-rose-300/80 mt-1 leading-relaxed">

@@ -123,7 +123,7 @@ export default function HostEarningsPage() {
             <div className="bg-gradient-to-r from-amber-500/10 via-teal-500/10 to-emerald-500/10 rounded-2xl p-6 border border-amber-500/20 space-y-3">
               <h2 className="font-extrabold text-sm text-slate-900 dark:text-white flex items-center gap-2">
                 <PieChart className="w-4 h-4 text-amber-600" />
-                <span>Deterministic SIH 2026 Settlement Equation</span>
+                <span>Deterministic Settlement Equation</span>
               </h2>
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono bg-white/70 dark:bg-slate-900/70 p-4 rounded-xl border border-slate-200/60 dark:border-slate-800">
                 <div className="text-center sm:text-left">
